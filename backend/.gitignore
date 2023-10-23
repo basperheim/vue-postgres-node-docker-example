@@ -1,0 +1,10 @@
+# macOS files
+**/.DS_Store
+**/pg-data
+
+# Env files
+**/*.env
+
+.prettierrc
+
+node_modules

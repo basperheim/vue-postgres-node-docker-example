@@ -1,0 +1,18 @@
+FROM node:20.8-alpine3.18 as base
+
+# Create and set the working directory
+WORKDIR /app/src/
+COPY ./backend/src/package.json ./backend/src/yarn.lock ./
+RUN yarn install
+COPY ./backend/src .
+EXPOSE 3009
+
+# this is the development image
+FROM base as dev
+ENV NODE_ENV development
+CMD ["yarn", "run", "dev"]
+
+# this is the prod image
+FROM base as prod
+ENV NODE_ENV production
+CMD ["yarn", "run", "prod"]

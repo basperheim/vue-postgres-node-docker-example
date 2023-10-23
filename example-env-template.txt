@@ -1,0 +1,13 @@
+# use this template for `.dev.env` in root of project
+# Postgres
+POSTGRES_DB=db_name
+POSTGRES_USER=user_here
+POSTGRES_PASSWORD=strong_password_here
+POSTGRES_PORT=5432
+
+# Redis
+REDIS_PASSWORD=strong_password_here
+REDIS_PORT=6333
+
+# AUTH / JWT
+SECRET_KEY=strong_encrypted_key_here
